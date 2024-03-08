@@ -1,0 +1,7 @@
+<h1>Customers Missing Email Addresses</h1>
+
+<% if @customers.any? %>
+  <%= render partial: 'customer', collection: @customers %>
+<% else %>
+  <p>No customers are missing email addresses.</p>
+<% end %>
