@@ -1,25 +1,25 @@
 ActiveAdmin.register Customer do
-    permit_params :full_name, :phone_number, :email, :notes, :image
+    permit_params :fullName, :phoneNumber, :email, :notes, :image
   
     index do
       selectable_column
       id_column
-      column :full_name
-      column :phone_number
+      column :fullName
+      column :phoneNumber
       column :email
       column :created_at
       actions
     end
   
-    filter :full_name
-    filter :phone_number
+    filter :fullName
+    filter :phoneNumber
     filter :email
     filter :created_at
   
     form do |f|
       f.inputs do
-        f.input :full_name
-        f.input :phone_number
+        f.input :fullName
+        f.input :phoneNumber
         f.input :email
         f.input :notes
         f.input :image, as: :file
